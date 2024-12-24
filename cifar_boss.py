@@ -43,11 +43,11 @@ def parse_arguments() -> argparse.Namespace:
     parser.add_argument('--study-name', default='cifar_study', type=str)
     parser.add_argument('--storage-path', default='sqlite:///optuna_cifar.db', type=str)
     # BOSS-specific arguments
-    parser.add_argument('--num-total-trial', default=128, type=int)
-    parser.add_argument('--num-warmup-trial', default=32, type=int)
+    parser.add_argument('--num-total-trial', default=8, type=int)
+    parser.add_argument('--num-warmup-trial', default=2, type=int)
     parser.add_argument('--pretrained-mode', action='store_true')
 
-    return parser.parse_args()
+    return parser.parse_args()  
 
 
 def main():
